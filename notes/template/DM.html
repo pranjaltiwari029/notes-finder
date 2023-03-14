@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block message %}
+<h1>Digital <em>Marketing</em> </h1>
+<p>  <b> Digital marketing</b>, also called online marketing, is the promotion of brands to connect with potential customers using the internet and other forms of digital communication. This includes not only email, social media, and web-based advertising, but also text and multimedia messages as a marketing channel. </p>
+{% endblock message %}
+{% block content %}
+
+<div class="container" >
+    <div style="display:flex;width:100% !important;margin:2rem 0; align-items:center;justify-content:center;" >
+    <h1 style="font-size:2.5rem;font-weight:650">Notes/Study Material for <span style="color:#fba70b">Digital Marketing</span></h1>
+    </div>
+    <div style="display:flex;flex-direction:row;gap:2rem;flex-wrap:wrap;width:100vw;padding:0 2rem 0 0">
+        {% for content in contents %}   
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12"
+                style=""
+        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+            <div class="features-item">
+                <div class="features-icon">                    
+                    <h4><b> {{content.title}} </b></h4>
+                    <p> {{content.desc}}  </p>        
+                    <p> {{content.date}} </p> 
+                    {% comment %} <a href="{{content.file.url}} "><b>Download File</b></a> {% endcomment %}
+                    <a href="{{content.file.url}}" class="main-button">
+                        OPEN
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}    
+    </div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>NOTES-FINDER</title>
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}"/>
+<!--
+
+Lava Landing Page
+
+https://templatemo.com/tm-540-lava-landing-page
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-lava.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <h1 style="float:left"><a href="{% url 'home' %}" class="logo" >
+                           <strong> NOTES-<span style="color:#fba70b" >FINDER</strong>
+                        </a></h1>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav" style="float:right">
+                            <li class="scroll-to-section"><a href=" {% url "home" %} "><b>  Home</b></a></li>
+                                                        
+                            <li class="submenu">
+                                {% comment %} <a href="javascript:;"><b>Notes</b></a>
+                                <ul>
+                                    <li><a href="{% url 'ai' %}" class="menu-item"> Artificial Intelligence </a></li>
+                                    <li><a href="{% url 'java' %}" class="menu-item"> JAVA Programming </a></li>
+                                    <li><a href="{% url 'se' %}" class="menu-item"> Software Engineering</a></li>
+                                    <li><a href="{% url 'ime' %}" class="menu-item"> Intro to Management</a></li>
+                                    <li><a href="{% url 'pd' %}" class="menu-item"> Personality Devlopment</a></li>
+                                    <li><a href="{% url 'dm' %}" class="menu-item"> Digital Marketing</a></li>
+                                </ul> {% endcomment %}
+                                
+                                <div class="dropdown">
+                                    
+                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <strong> Notes</strong>
+                                    </button>
+                                    
+                                    {% comment %} <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> {% endcomment %}
+                                        <ul>
+                                            <li><a class="dropdown-item" href=" {% url "ai" %} ">Artificial Intelligence</a></li>
+                                            <li><a class="dropdown-item" href="{% url "java" %}">JAVA Programming</a></li>
+                                            <li><a class="dropdown-item" href="{% url "se" %}">Software Engineering</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "ime" %} ">Intro to Management</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "pd" %} ">Personality Development</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "dm" %} ">Digital Marketing</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "ds" %} ">Data Science</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "sd" %} ">Software Development</a></li>
+                                            <li><a class="dropdown-item" href=" {% url "ns" %} ">Network Security</a></li>
+                                        
+                                        </ul>   
+                                    {% comment %} </div> {% endcomment %}
+                                </div>
+                            </li>
+                            <li class="scroll-to-section"><a href=" {% url "home" %}#contact-us "><b>Contact Us</b></a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        {% block message %} {% endblock message %}
+                        <a href="{%url 'home' %}#welcome" class="main-button-slider"><b>HOME</a>
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+ <br><br>
+    {% block content %} {% endblock content %}
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+    <h1> <i>Notes/ Study Material for Artificial Intelligence</i> </h1> <br><br>
+    {% for content in contents %}
+        <h2><b> {{content.title}} </b></h2>
+        <h6> {{content.desc}}  </h6>       
+        <p> {{content.date}} </p>
+        <a href="{{content.file.url}} "><b>Download File</b></a>
+        
+    {% endfor %}
+    </div > -->
+        <!-- ***** Footer Start ***** -->
+        <footer id="contact-us">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <!-- ***** Contact Form Start ***** -->
+                         <!-- <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="contact-form">
+                                <form id="contact" action="" method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <fieldset>
+                                                <input name="inputname" type="text" id="name" placeholder=" Your Full Name" required=""
+                                                    style="background-color: rgba(250,250,250,0.3);">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <fieldset>
+                                                <input name="inputemail" type="text" id="email" placeholder=" Your E-Mail "
+                                                    required="" style="background-color: rgba(250,250,250,0.3);">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <textarea name="inputmessage" rows="6" id="message" placeholder="Your Message"
+                                                    required="" style="background-color: rgba(250,250,250,0.3);"></textarea>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <button type="submit" id="form-submit" class="main-button">Send Message
+                                                    Now</button>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>  -->
+                        <!-- ***** Contact Form End ***** -->
+                        
+                        <div class="right-content col-lg-6 col-md-12 col-sm-12">
+                            <br><br>
+                            <h2>Contact <em>NOTES-FINDER</em></h2>
+                            <p>If you have  any queries or just want to get in touch, use the <a href="{%url 'home' %}#contact-us"  style="color:yellow">CONTACT FORM</a> .
+                                {% comment %} We are looking forward to make this site immensely useful !. <br><br> <a href="{%url 'home' %}#contact-us" class="main-button-slider" ><b>CONTACT FORM</a> {% endcomment %}
+                                <br><br>Made with sheer perseverance by - <br><u > PRANJAL TIWARI</u></p>
+                            <ul class="social">
+                                <li><a href="https://www.instagram.com/tiwari_pranjal2911/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://github.com/pranjaltiwari029"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.facebook.com/pranjal.tiwari.900"><i class="fa fa-facebook"></i></a></li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sub-footer">
+                            <p>Copyright &copy; 2020 Lava Landing Page
+    
+                            | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </footer>
+    
+        <!-- jQuery -->
+        <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+    
+        <!-- Bootstrap -->
+        <script src="{% static 'assets/js/popper.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    
+        <!-- Plugins -->
+        <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+        <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+        <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    
+        <!-- Global Init -->
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+    
+    </body>
+    </html>
+
+    {% comment %} <a href="{% url 'home' %}#contact-us" class="menu-item"> {% endcomment %}

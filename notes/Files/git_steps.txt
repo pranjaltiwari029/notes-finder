@@ -1,0 +1,8 @@
+1)git clone https(your link)
+2)copy paste karna hai (folder ) c drive mein
+3) cd folder name
+4) git status
+5)git add .
+6) git commit -m"your message"
+7)git push
+
