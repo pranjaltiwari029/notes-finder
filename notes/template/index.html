@@ -116,25 +116,26 @@ https://templatemo.com/tm-540-lava-landing-page
     <div class="welcome-area" id="welcome">
 
         <!-- ***** Header Text Start ***** -->
+        <img src="{% static 'assets/images/hero.png' %}" class="rounded img-fluid d-lg-block mx-auto d-sm-none" style="height: 90vh;object-fit: cover;width: 50vw;position: absolute;top: 0;right:0;" alt="App">
+
         <div class="header-text">
             <div class="container">
-                 {% comment %} <div class="row">
-                    <div class="left-img col-lg-6 col-md-12 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <img src="{% static 'assets/images/hello.png' %}" class="" alt="App"   >
-                    </div>
-                </div>   {% endcomment %}
                 <div class="row">
+                    <div class="d-lg-none col-md-12 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="{% static 'assets/images/hero.png' %}" class="rounded img-fluid d-block mx-auto" style="height: 100vh;object-fit: contain;" alt="App">
+                </div>
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <h1>Find your <em>NOTES</em> here</h1>
                         <p>Here in <a href="#about">NOTE-FINDER</a> we will be uploading notes of every subject of  BCA 4th semester. Currently this website is only for students of <b> BCA 4th sem</b> . We are working on the site, so that it can cater to the students of every semester.</p>
-                        <a href="#about" class="main-button-slider"><b>click  here for   NOTES</a>
+                        <a href="#about" class="main-button-slider">click  here for   NOTES</a>
   
                     </div>
+                    
                 </div>
-                
             </div>
+            
         </div>
         <!-- ***** Header Text End ***** -->
     </div>
