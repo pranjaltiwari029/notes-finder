@@ -58,7 +58,8 @@ https://templatemo.com/tm-540-lava-landing-page
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="float:right">
                             <li class="scroll-to-section" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><a href=" {% url "home" %} "><b>  Home</b></a></li>
-                                                        
+                            <li class="scroll-to-section" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><a href=" {% url "home" %}#promotion "><b> About </b></a></li>
+                                                       
                             <li class="submenu">
                                 {% comment %} <a href="javascript:;" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Notes</a>
                                 <ul>
@@ -106,10 +107,15 @@ https://templatemo.com/tm-540-lava-landing-page
     <!-- ***** Header Area End ***** -->
     <div class="welcome-area" id="welcome">
 
+
+        <img src="{% static 'assets/images/hero.png' %}" class="rounded img-fluid d-lg-block mx-auto d-sm-none" style="height: 90vh;object-fit: cover;width: 50vw;position: absolute;top: 0;right:0;" alt="App">
+
+
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
             <div class="container">
-                
+
+                    
                     <div class="row">
                         <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                             data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
@@ -124,8 +130,10 @@ https://templatemo.com/tm-540-lava-landing-page
         <!-- ***** Header Text End ***** -->
     </div>
     <!-- ***** Welcome Area End ***** -->
- <br><br>
-    {% block content %} {% endblock content %}
+ <br>
+    {% block content %} 
+    
+    {% endblock content %}
     <!-- <div class="col-lg-6 col-md-6 col-sm-6">
     <h1> <i>Notes/ Study Material for Artificial Intelligence</i> </h1> <br><br>
     {% for content in contents %}
