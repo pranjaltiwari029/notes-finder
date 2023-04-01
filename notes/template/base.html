@@ -57,12 +57,12 @@ https://templatemo.com/tm-540-lava-landing-page
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="float:right">
-                            <li class="scroll-to-section"><a href=" {% url "home" %} "><b>  Home</b></a></li>
+                            <li class="scroll-to-section" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><a href=" {% url "home" %} "><b>  Home</b></a></li>
                                                         
                             <li class="submenu">
-                                {% comment %} <a href="javascript:;"><b>Notes</b></a>
+                                {% comment %} <a href="javascript:;" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Notes</a>
                                 <ul>
-                                    <li><a href="{% url 'ai' %}" class="menu-item"> Artificial Intelligence </a></li>
+                                    <li><a href="{% url 'ai' %}" class="menu-item" > Artificial Intelligence </a></li>
                                     <li><a href="{% url 'java' %}" class="menu-item"> JAVA Programming </a></li>
                                     <li><a href="{% url 'se' %}" class="menu-item"> Software Engineering</a></li>
                                     <li><a href="{% url 'ime' %}" class="menu-item"> Intro to Management</a></li>
@@ -72,8 +72,8 @@ https://templatemo.com/tm-540-lava-landing-page
                                 
                                 <div class="dropdown">
                                     
-                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <strong> Notes</strong>
+                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  color:black">
+                                         Notes
                                     </button>
                                     
                                     {% comment %} <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> {% endcomment %}
@@ -92,7 +92,7 @@ https://templatemo.com/tm-540-lava-landing-page
                                     {% comment %} </div> {% endcomment %}
                                 </div>
                             </li>
-                            <li class="scroll-to-section"><a href=" {% url "home" %}#contact-us "><b>Contact Us</b></a></li>
+                            <li class="scroll-to-section"><a href=" {% url "home" %}#contact-us " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b>Contact Us</b></a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -109,14 +109,16 @@ https://templatemo.com/tm-540-lava-landing-page
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
             <div class="container">
-                <div class="row">
-                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        {% block message %} {% endblock message %}
-                        <a href="{%url 'home' %}#welcome" class="main-button-slider"><b>HOME</a>
+                
+                    <div class="row">
+                        <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                            data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                            {% block message %} {% endblock message %}
+                            <a href="{%url 'home' %}#welcome" class="main-button-slider"><b>HOME</a>
   
+                        </div>
                     </div>
-                </div>
+                
             </div>
         </div>
         <!-- ***** Header Text End ***** -->
@@ -184,9 +186,9 @@ https://templatemo.com/tm-540-lava-landing-page
                             <ul class="social">
                                 <li><a href="https://www.instagram.com/tiwari_pranjal2911/"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://github.com/pranjaltiwari029"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/pranjal-tiwari-343952269/"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.facebook.com/pranjal.tiwari.900"><i class="fa fa-facebook"></i></a></li>
-                                
-                                
+                               
                                 
                             </ul>
                         </div>
